@@ -10,7 +10,7 @@ body {
 /* Estilo do Cabeçalho */
 .header {
     height: 90px; /* Definindo a altura para 90px */
-    background: linear-gradient(180deg, #264653 0%, #34758f 100%); /* Degradê suave */
+    background: #264653; /* Degradê suave */
     display: flex;
     align-items: center; /* Centraliza verticalmente o texto */
     justify-content: center; /* Centraliza horizontalmente o texto */
