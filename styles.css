@@ -7,55 +7,79 @@ body {
     color: #333;
 }
 
-h1, h2 {
-    color: #2a9d8f; /* Verde suave para os títulos */
+/* Estilo do Cabeçalho */
+.header {
+    height: 90px; /* Definindo a altura para 90px */
+    background: linear-gradient(180deg, #264653 0%, #34758f 100%); /* Degradê suave */
+    display: flex;
+    align-items: center; /* Centraliza verticalmente o texto */
+    justify-content: center; /* Centraliza horizontalmente o texto */
+    font-size: 24px; /* Tamanho do texto */
+    color: white; /* Cor do texto branca */
 }
 
-p {
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
 
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    min-height: 434px;
 }
 
-/* Estilo do Cabeçalho */
-.header {
-    height: 90px; /* Definindo a altura para 90px */
-    background: linear-gradient(180deg, #264653 0%, #34758f 100%); /* Degradê suave, com a transição mais abaixo */
-    display: flex;
-    align-items: center;
-    justify-content: flex-end; /* Alinhando o nome à direita */
-    padding-right: 20px;
-}
 
-.header_titulo {
-    color: #ffffff; /* Texto branco */
-    font-size: 24px; /* Tamanho menor para o nome da marca */
-    font-weight: bold;
-}
-
-/* Estilo para o Resumo e Vídeo em linha no desktop */
 .resumo-video {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 20px;
-    align-items: center; /* Centraliza o conteúdo verticalmente para melhor visualização no mobile */
 }
 
-.resumo {
+.resumo-texto {
     flex: 1;
-    width: 100%; /* Garante que o resumo use toda a largura no mobile */
+    background-color: #d2d2d2; /* Fundo cinza claro (se quiser manter uma cor de fundo) */
+    color: gray; /* Texto em cinza */
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: normal;
+    height: 100px; /* Definindo uma altura para simular 5 linhas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.video {
-    width: 100%; /* Garante que o vídeo ocupe toda a largura no mobile */
-    height: auto; /* Mantém a proporção do vídeo */
-    min-height: 240px; /* Altura mínima para garantir que o vídeo tenha o tamanho adequado */
+.video-wrapper {
+    flex: 1;
+    background-color: #d4edda; /* Fundo verde claro */
+    color: darkgreen; /* Texto em verde escuro */
+    padding: 20px;
+    text-align: center;
+    font-size: 1.1em;
+    font-weight: normal;
+    height: 100px; /* Definindo uma altura padrão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Divs com estilo semelhante: titulo-trabalho e texto-completo */
+.titulo-trabalho, .texto-completo {
+    width: 100%;
+    background-color: #d2d2d2; /* Fundo cinza claro */
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.titulo-trabalho {
+    margin-bottom: 20px; /* Espaçamento extra para separar do resumo-video */
+}
+
+.texto-completo {
+    margin-top: 20px; /* Espaçamento extra entre texto-completo e o restante */
 }
 
 /* Para telas maiores (desktop), o resumo e o vídeo ficam lado a lado */
