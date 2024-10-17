@@ -1,0 +1,94 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa; /* Cor suave */
+    color: #333;
+}
+
+h1, h2 {
+    color: #2a9d8f; /* Verde suave para os títulos */
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo do Cabeçalho */
+.header {
+    height: 90px; /* Definindo a altura para 90px */
+    background: linear-gradient(180deg, #264653 0%, #34758f 100%); /* Degradê suave, com a transição mais abaixo */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Alinhando o nome à direita */
+    padding-right: 20px;
+}
+
+.header_titulo {
+    color: #ffffff; /* Texto branco */
+    font-size: 24px; /* Tamanho menor para o nome da marca */
+    font-weight: bold;
+}
+
+/* Estilo para o Resumo e Vídeo em linha no desktop */
+.resumo-video {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center; /* Centraliza o conteúdo verticalmente para melhor visualização no mobile */
+}
+
+.resumo {
+    flex: 1;
+    width: 100%; /* Garante que o resumo use toda a largura no mobile */
+}
+
+.video {
+    width: 100%; /* Garante que o vídeo ocupe toda a largura no mobile */
+    height: auto; /* Mantém a proporção do vídeo */
+    min-height: 240px; /* Altura mínima para garantir que o vídeo tenha o tamanho adequado */
+}
+
+/* Para telas maiores (desktop), o resumo e o vídeo ficam lado a lado */
+@media (min-width: 768px) {
+    .resumo-video {
+        flex-direction: row;
+        align-items: flex-start; /* Mantém o conteúdo alinhado ao topo em telas maiores */
+    }
+
+    .resumo {
+        width: auto; /* Remove a largura 100% no desktop para evitar estiramento */
+    }
+
+    .video {
+        width: 50%; /* Define uma largura fixa para o vídeo em telas maiores */
+        height: 360px; /* Define uma altura fixa para melhor visualização em desktop */
+    }
+}
+
+/* Estilos para Imagem e Texto Completo */
+.imagem {
+    display: block;
+    width: 100%; /* Faz a imagem ocupar 100% da largura, mas nunca mais que isso */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 20px auto; /* Centraliza a imagem */
+}
+
+
+/* Rodapé */
+.footer {
+    background-color: #264653;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 40px;
+}
