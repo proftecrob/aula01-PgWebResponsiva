@@ -58,6 +58,7 @@ body {
     font-size: 1.1em;
     font-weight: normal;
     height: 100px; /* Definindo uma altura padrão */
+    min-height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -90,12 +91,12 @@ body {
     }
 
     .titulo-trabalho, .texto-completo, .resumo {
-        width: auto; /* Remove a largura 100% no desktop para evitar estiramento */
+        width: auto !important; /* Remove a largura 100% no desktop para evitar estiramento */
     }
 
-    .video {
+    .video-wrapper {
         width: 50%; /* Define uma largura fixa para o vídeo em telas maiores */
-        height: 360px; /* Define uma altura fixa para melhor visualização em desktop */
+        min-height: 240px; /* Define uma altura fixa para melhor visualização em desktop */
     }
 }
 
