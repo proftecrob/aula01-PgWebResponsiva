@@ -30,19 +30,19 @@ body {
 
 .resumo-video {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
     gap: 20px;
+    /* No mobile (telas menores), as divs devem ficar em coluna */
+    flex-direction: column;
 }
 
 .resumo-texto {
     flex: 1;
     background-color: #d2d2d2; /* Fundo cinza claro (se quiser manter uma cor de fundo) */
-    color: gray; /* Texto em cinza */
+    color: rgb(0, 0, 0); 
     padding: 20px;
     text-align: center;
     font-size: 1.1em;
-    font-weight: normal;
+    font-weight: bold;
     height: 100px; /* Definindo uma altura para simular 5 linhas */
     display: flex;
     justify-content: center;
@@ -89,7 +89,7 @@ body {
         align-items: flex-start; /* Mantém o conteúdo alinhado ao topo em telas maiores */
     }
 
-    .resumo {
+    .titulo-trabalho, .texto-completo, .resumo {
         width: auto; /* Remove a largura 100% no desktop para evitar estiramento */
     }
 
@@ -99,20 +99,10 @@ body {
     }
 }
 
-/* Estilos para Imagem e Texto Completo */
-.imagem {
-    display: block;
-    width: 100%; /* Faz a imagem ocupar 100% da largura, mas nunca mais que isso */
-    height: auto; /* Mantém a proporção da imagem */
-    margin: 20px auto; /* Centraliza a imagem */
-}
-
-
 /* Rodapé */
 .footer {
     background-color: #264653;
     color: white;
     text-align: center;
-    padding: 10px 0;
     margin-top: 40px;
 }
