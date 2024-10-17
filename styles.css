@@ -107,3 +107,7 @@ body {
     text-align: center;
     margin-top: 40px;
 }
+
+.footer>.container {
+    min-height: auto !important;
+}
