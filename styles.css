@@ -58,7 +58,7 @@ body {
     font-size: 1.1em;
     font-weight: normal;
     height: 100px; /* Definindo uma altura padrão */
-    min-height: auto;
+    min-height: 100px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +66,7 @@ body {
 
 /* Divs com estilo semelhante: titulo-trabalho e texto-completo */
 .titulo-trabalho, .texto-completo {
-    width: 100%;
+    width: auto;
     background-color: #d2d2d2; /* Fundo cinza claro */
     padding: 20px;
     margin-top: 20px;
@@ -91,7 +91,7 @@ body {
     }
 
     .titulo-trabalho, .texto-completo, .resumo {
-        width: auto !important; /* Remove a largura 100% no desktop para evitar estiramento */
+        width: 100% !important; /* Remove a largura 100% no desktop para evitar estiramento */
     }
 
     .video-wrapper {
