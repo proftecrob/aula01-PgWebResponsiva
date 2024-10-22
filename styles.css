@@ -1,113 +1,78 @@
-/* Estilos gerais */
-body {
-    font-family: Arial, sans-serif;
+/* abaixo criamos variáveis */
+:root {
+    --primary-color: #264653;
+    --secondary-color: #d2d2d2;
+    --font-family: Arial, sans-serif;
+    --font-size-base: 20px;
+    --font-weight-bold: bold;
+  }
+  
+  body {
+    font-family: var(--font-family);
     margin: 0;
     padding: 0;
-    background-color: #fafafa; /* Cor suave */
-    color: #333;
-}
-
-/* Estilo do Cabeçalho */
-.header {
-    height: 90px; /* Definindo a altura para 90px */
-    background: #264653; /* Degradê suave */
-    display: flex;
-    align-items: center; /* Centraliza verticalmente o texto */
-    justify-content: center; /* Centraliza horizontalmente o texto */
-    font-size: 24px; /* Tamanho do texto */
-    color: white; /* Cor do texto branca */
-}
-
-
-.container {
-    width: 90%;
+  }
+  
+  .header {
+    background: var(--primary-color);
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+  }
+  
+  .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
     min-height: 434px;
-}
-
-
-.resumo-video {
+  }
+  
+  .resumo-video {
     display: flex;
-    gap: 20px;
-    /* No mobile (telas menores), as divs devem ficar em coluna */
     flex-direction: column;
-}
-
-.resumo-texto {
+    gap: 20px;
+  }
+  
+  .resumo-texto, .video-wrapper {
     flex: 1;
-    background-color: #d2d2d2; /* Fundo cinza claro (se quiser manter uma cor de fundo) */
-    color: rgb(0, 0, 0); 
     padding: 20px;
     text-align: center;
-    font-size: 1.1em;
-    font-weight: bold;
-    height: 100px; /* Definindo uma altura para simular 5 linhas */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.video-wrapper {
-    flex: 1;
-    background-color: #d4edda; /* Fundo verde claro */
-    color: darkgreen; /* Texto em verde escuro */
+    font-size: var(--font-size-base);
+    font-weight: var(--font-weight-bold);
+  }
+  
+  .resumo-texto {
+    background-color: var(--secondary-color);
+    height: 100px;
+  }
+  
+  .video-wrapper {
+    background-color: #d4edda;
+    min-height: 240px;
+  }
+  
+  .titulo-trabalho, .texto-completo {
+    background-color: var(--secondary-color);
     padding: 20px;
     text-align: center;
-    font-size: 1.1em;
-    font-weight: bold;
-    height: 100px; /* Definindo uma altura padrão */
-    min-height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Divs com estilo semelhante: titulo-trabalho e texto-completo */
-.titulo-trabalho, .texto-completo {
-    width: auto;
-    background-color: #d2d2d2; /* Fundo cinza claro */
-    padding: 20px;
-    margin-top: 20px;
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.2em;
-}
-
-.titulo-trabalho {
-    margin-bottom: 20px; /* Espaçamento extra para separar do resumo-video */
-}
-
-.texto-completo {
-    margin-top: 20px; /* Espaçamento extra entre texto-completo e o restante */
-}
-
-/* Para telas maiores (desktop), o resumo e o vídeo ficam lado a lado */
-@media (min-width: 768px) {
-    .resumo-video {
-        flex-direction: row;
-        align-items: flex-start; /* Mantém o conteúdo alinhado ao topo em telas maiores */
-    }
-
-    .titulo-trabalho, .texto-completo, .resumo {
-        width: 100% !important; /* Remove a largura 100% no desktop para evitar estiramento */
-    }
-
-    .video-wrapper {
-        width: 50%; /* Define uma largura fixa para o vídeo em telas maiores */
-        min-height: 240px; /* Define uma altura fixa para melhor visualização em desktop */
-    }
-}
-
-/* Rodapé */
-.footer {
-    background-color: #264653;
+    font-size: 24px;
+    margin: 20px 0;
+  }
+  
+  .footer {
+    background-color: var(--primary-color);
     color: white;
     text-align: center;
     margin-top: 40px;
-}
-
-.footer>.container {
-    min-height: auto !important;
-}
+  }
+  
+  /* abaixo criamos regras para telas maiores */
+  @media (min-width: 768px) {
+    .resumo-video {
+      flex-direction: row;
+    }
+    .video-wrapper {
+      width: 50%;
+    }
+  }
