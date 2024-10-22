@@ -65,6 +65,7 @@
     color: white;
     text-align: center;
     margin-top: 40px;
+    max-height:140px;
   }
   
   /* abaixo criamos regras para telas maiores */
