@@ -5,75 +5,73 @@
     --font-family: Arial, sans-serif;
     --font-size-base: 20px;
     --font-weight-bold: bold;
-  }
-  
-  body {
+}
+
+body {
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
-  }
-  
-  .header {
+}
+
+.header {
     background: var(--primary-color);
     padding: 20px;
     text-align: center;
     font-size: 24px;
     color: white;
-  }
-  
-  .container {
+}
+
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-    min-height: 434px;
-  }
-  
-  .resumo-video {
+}
+
+.resumo-video {
     display: flex;
     flex-direction: column;
     gap: 20px;
-  }
-  
-  .resumo-texto, .video-wrapper {
+}
+
+.resumo-texto, .video-wrapper {
     flex: 1;
     padding: 20px;
     text-align: center;
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-bold);
-  }
-  
-  .resumo-texto {
+}
+
+.resumo-texto {
     background-color: var(--secondary-color);
-    height: 100px;
-  }
-  
-  .video-wrapper {
+}
+
+.video-wrapper {
     background-color: #d4edda;
-    min-height: 240px;
-  }
-  
-  .titulo-trabalho, .texto-completo {
+}
+
+.titulo-trabalho, .texto-completo {
     background-color: var(--secondary-color);
     padding: 20px;
     text-align: center;
     font-size: 24px;
     margin: 20px 0;
-  }
-  
-  .footer {
+}
+
+.footer {
     background-color: var(--primary-color);
     color: white;
     text-align: center;
     margin-top: 40px;
-    max-height:140px;
-  }
-  
-  /* abaixo criamos regras para telas maiores */
-  @media (min-width: 768px) {
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+/* abaixo criamos regras para telas maiores */
+@media (min-width: 768px) {
     .resumo-video {
-      flex-direction: row;
+        flex-direction: row;
     }
-    .video-wrapper {
-      width: 50%;
-    }
-  }
+}
